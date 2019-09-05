@@ -48,7 +48,11 @@ let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
-let nav = document.getElementsByTagName("nav");
+let navLink = document.querySelectorAll("nav a");
+navLink.forEach((link, index) => {
+  const num = 1;
+  link = siteContent.nav[`nav-item-${index + num}`];
+  document.getElementsByTagName("a")[index].append(link)});
 let cta = document.getElementsByClassName("cta");
 let main = document.getElementsByClassName("main-content")
 let contact = document.getElementsByClassName("contact");
