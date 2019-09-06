@@ -69,7 +69,16 @@ let c = 'content';
 let h = 'h4';
 const h4 = document.getElementsByTagName("h4");
 const p = document.getElementsByTagName("p");
-
+mainTop.forEach((t1, t2, p1, p2) => {
+	t1 = siteContent["main-content"][`services-${h}`];
+	t2 = siteContent["main-content"][`product-${h}`];
+	p1 = siteContent["main-content"][`services-${c}`];
+	p2 = siteContent["main-content"][`product-${c}`];
+	h4[0].append(t1);
+	h4[1].append(t2);
+	p[0].append(p1);
+	p[1].append(p2);
+});
 
 let contact = document.getElementsByClassName("contact");
 let footer = document.getElementsByTagName("footer");
