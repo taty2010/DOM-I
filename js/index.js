@@ -64,6 +64,12 @@ ctaText.forEach((t, b) => {
 	document.getElementsByTagName("h1")[0].append(t);
   document.getElementsByTagName("button")[0].append(b);});
   
-let main = document.getElementsByClassName("main-content")
+let mainTop = document.querySelectorAll(".top-content");
+let c = 'content';
+let h = 'h4';
+const h4 = document.getElementsByTagName("h4");
+const p = document.getElementsByTagName("p");
+
+
 let contact = document.getElementsByClassName("contact");
 let footer = document.getElementsByTagName("footer");
