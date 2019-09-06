@@ -80,5 +80,38 @@ mainTop.forEach((t1, t2, p1, p2) => {
 	p[1].append(p2);
 });
 
-let contact = document.getElementsByClassName("contact");
+let mainBottom = document.querySelectorAll(".bottom-content")
+mainBottom.forEach((t1, t2, p1, p2) => {
+	t1 = siteContent["main-content"][`features-${h}`];
+	t2 = siteContent["main-content"][`about-${h}`];
+	p1 = siteContent["main-content"][`features-${c}`];
+	p2 = siteContent["main-content"][`about-${c}`];
+	h4[2].append(t1);
+	h4[3].append(t2);
+	p[2].append(p1);
+	p[3].append(p2);
+});
+
+mainBottom.forEach((t1, p1) => {
+	t1 = siteContent["main-content"][`vision-${h}`];
+	p1 = siteContent["main-content"][`vision-${c}`];
+	h4[4].append(t1);
+	p[4].append(p1);
+});
+
+let contact = document.querySelectorAll(".main-content");
+contact.forEach((el1, el2, el3, el4)=>{
+	el1 = siteContent.contact[`contact-${h}`];
+	el2 = siteContent.contact.address;
+	el3 = siteContent.contact.phone;
+	el4 = siteContent.contact.email;
+	h4[5].append(el1);
+	p[5].append(el2);
+	p[6].append(el3);
+	p[7].append(el4);
+			
+});
+
 let footer = document.getElementsByTagName("footer");
+let fContent = siteContent.footer.copyright;
+p[8].append(fContent);
