@@ -51,9 +51,19 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 let navLink = document.querySelectorAll("nav a");
 navLink.forEach((link, index) => {
   const num = 1;
+  link.style.color = '#1c9730';
   link = siteContent.nav[`nav-item-${index + num}`];
-  document.getElementsByTagName("a")[index].append(link)});
+  document.getElementsByTagName("a")[index].append(link)
+});
+  
 let cta = document.getElementsByClassName("cta");
+let ctaText = Array.from(document.getElementsByClassName("cta-text"));
+ctaText.forEach((t, b) => {
+	t = siteContent.cta.h1;
+	b = siteContent.cta.button;
+	document.getElementsByTagName("h1")[0].append(t);
+  document.getElementsByTagName("button")[0].append(b);});
+  
 let main = document.getElementsByClassName("main-content")
 let contact = document.getElementsByClassName("contact");
 let footer = document.getElementsByTagName("footer");
